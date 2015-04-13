@@ -25,7 +25,7 @@ check() {
 }
 
 package() {
-	install -m 444 $srcdir/COPYING $pkgdir/usr/share/licenses/$pkgname
+	install -m 444 $srcdir/Orthanc-$pkgver COPYING $pkgdir/usr/share/licenses/$pkgname
 	make DESTDIR="$pkgdir/" install
 }
 sha256sums=('0668e23dbdf4aa12bf417cf22bfb7b50379797fc6b1132a582789289d1728e69')
