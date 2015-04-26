@@ -1,4 +1,4 @@
-# Maintainer: Sharif Olorin <sio@tesser.org
+# Maintainer: Sharif Olorin <sio@tesser.org>
 
 # FIXME: sort dependencies out properly rather than building a
 #        statically-linked binary.
