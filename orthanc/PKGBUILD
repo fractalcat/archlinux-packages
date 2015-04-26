@@ -12,7 +12,7 @@ url="http://orthanc-server.com/"
 license="custom:GPL3WithOpenSSLException"
 source=("Orthanc-$pkgver.tar.gz::http://downloads.sourceforge.net/orthancserver/Orthanc-0.8.6.tar.gz")
 depends=("util-linux")
-makedepends=("python" "cmake" "mercurial" "unzip")
+makedepends=("python" "cmake" "mercurial" "unzip" "doxygen")
 
 build() {
 	cmake -DSTATIC_BUILD=ON -DCMAKE_BUILD_TYPE=Release $srcdir/Orthanc-$pkgver
