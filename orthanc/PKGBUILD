@@ -5,7 +5,7 @@
 
 pkgname=orthanc
 pkgver=0.8.6
-pkgrel=1
+pkgrel=2
 pkgdesc="Open-source, lightweight DICOM server."
 arch=("x86_64" "i686")
 url="http://orthanc-server.com/"
@@ -25,7 +25,8 @@ check() {
 }
 
 package() {
-	install -m 444 $srcdir/Orthanc-$pkgver COPYING $pkgdir/usr/share/licenses/$pkgname
+	mkdir -p $pkgdir/usr/share/licenses/$pkgname
+	install -m 444 $srcdir/Orthanc-$pkgver/COPYING $pkgdir/usr/share/licenses/$pkgname
 	make DESTDIR="$pkgdir/" install
 }
 sha256sums=('0668e23dbdf4aa12bf417cf22bfb7b50379797fc6b1132a582789289d1728e69')
