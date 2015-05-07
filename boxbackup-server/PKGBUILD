@@ -4,7 +4,7 @@
 
 pkgname=boxbackup-server
 pkgver=0.11.1
-pkgrel=0
+pkgrel=1
 pkgdesc="An open source, completely automatic on-line backup system for UNIX."
 arch=('i686' 'x86_64')
 url="http://boxbackup.org"
@@ -22,7 +22,9 @@ build() {
 	./configure
 
 	make -j1 build-backup-server
+}
 
+package() {
     cp ${srcdir}/boxbackup-${pkgver}/release/bin/bbstored/bbstored ${srcdir}/boxbackup-${pkgver}/parcels/boxbackup-${pkgver}-backup-server-linux-gnu/bbstored
     cp ${srcdir}/boxbackup-${pkgver}/release/bin/bbstoreaccounts/bbstoreaccounts ${srcdir}/boxbackup-${pkgver}/parcels/boxbackup-${pkgver}-backup-server-linux-gnu/bbstoreaccounts
 
