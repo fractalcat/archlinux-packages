@@ -4,7 +4,7 @@
 
 pkgname=boxbackup-client
 pkgver=0.11.1
-pkgrel=0
+pkgrel=1
 pkgdesc="An open source, completely automatic on-line backup system for UNIX."
 arch=('i686' 'x86_64')
 url="http://boxbackup.org"
@@ -35,7 +35,9 @@ build() {
 	cp ${srcdir}/boxbackup-${pkgver}/release/bin/bbackupctl/bbackupctl ${srcdir}/boxbackup-${pkgver}/parcels/boxbackup-${pkgver}-backup-client-linux-gnu/bbackupctl
 
 	cp ${srcdir}/boxbackup-${pkgver}/bin/bbackupd/bbackupd-config ${srcdir}/boxbackup-${pkgver}/parcels/boxbackup-${pkgver}-backup-client-linux-gnu/bbackupd-config
+}
 
+package() {
   for f in \
     bbackupd \
     bbackupquery \
