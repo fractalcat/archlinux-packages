@@ -9,7 +9,7 @@ pkgdesc="An open source, completely automatic on-line backup system for UNIX."
 arch=('i686' 'x86_64' 'armv6h' 'armv7h')
 url="http://boxbackup.org"
 license=('BSD')
-depends=('openssl' 'perl' 'zlib')
+depends=('openssl' 'perl' 'zlib' 'libedit')
 backup=('etc/boxbackup/bbstored.conf')
 source=(http://boxbackup.org/svn/box/packages/boxbackup-$pkgver.tgz bbclient)
 
